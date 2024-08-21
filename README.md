@@ -18,20 +18,20 @@ This is the actual docker tool and can perform actions like :
 
 ## Popular Docker Commands
 
-# 1. docker run <br />
+### 1. docker run <br />
 ![command-01](https://github.com/user-attachments/assets/dd7f8f5e-0db9-49a9-be7e-95595d39ecbf)
 
-# 2. docker container ls
+### 2. docker container ls
 <br />
     <img width="461" alt="image" src="https://github.com/user-attachments/assets/763512b6-3e9c-4d5c-83d5-7569a737000c">
 
-# 3. docker container ls -a
+### 3. docker container ls -a
 <br />
 <img width="471" alt="image" src="https://github.com/user-attachments/assets/da20e9e4-6797-41c9-9a1e-68895fa60852">
 <br/>
 <img width="632" alt="image" src="https://github.com/user-attachments/assets/efc86167-d080-4ebb-a1ba-833ee9317fc1">
 
-# 4. start and stop containers
+### 4. start and stop containers
 <br />
 show all containers by <b> docker container ls -a </b>
 <br />
@@ -58,7 +58,7 @@ To again stop this container we can use <br />
 <img width="637" alt="image" src="https://github.com/user-attachments/assets/11a197a0-2c12-4ced-9917-f781068e1a40">
 <br />
 
-# 5. execute docker commands inside container <br />
+### 5. execute docker commands inside container <br />
 Lets say we want to execute inside container silly_moore so for this we need to make sure container is running. Hence if its not then use <br />
 <b> docker start silly_moore </b> <br /> 
 and then for execute command use below : 
@@ -75,7 +75,7 @@ Here we can see after exec command we are still in container and we can do ls to
 
 Note: Press Control + D to get out of container <br />
 
-# 6. images in local machine
+### 6. images in local machine
 <br />
 <b> docker images </b> 
 <br /> or <br />
