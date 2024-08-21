@@ -75,6 +75,16 @@ Here we can see after exec command we are still in container and we can do ls to
 
 Note: Press Control + D to get out of container <br />
 
+# 6. To see what all images are available in my computer
+<b> docker images </b> 
+<br /> or <br />
+<b> docker image ls </b> 
+<br />
+<img width="503" alt="image" src="https://github.com/user-attachments/assets/8688df8e-4d50-49cf-985a-00ebe791790d"> <br />
+
+
+
+
 
 
 
