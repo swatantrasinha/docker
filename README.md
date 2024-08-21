@@ -29,36 +29,36 @@ This is the actual docker tool and can perform actions like :
 
 4. docker container ls -a
 <br />
-    <img width="471" alt="image" src="https://github.com/user-attachments/assets/da20e9e4-6797-41c9-9a1e-68895fa60852">
-
-    <img width="632" alt="image" src="https://github.com/user-attachments/assets/efc86167-d080-4ebb-a1ba-833ee9317fc1">
+<img width="471" alt="image" src="https://github.com/user-attachments/assets/da20e9e4-6797-41c9-9a1e-68895fa60852">
+<br/>
+<img width="632" alt="image" src="https://github.com/user-attachments/assets/efc86167-d080-4ebb-a1ba-833ee9317fc1">
 
 5. start and stop containers
-    <br />
-    show all containers by <b> docker container ls -a </b>
-    <br />
-    <img width="638" alt="image" src="https://github.com/user-attachments/assets/7e0335df-fbf0-4689-adda-ff7435b9d5ad">
-    
-    In Docker desktop it will look like : <br />
-    <img width="881" alt="image" src="https://github.com/user-attachments/assets/03195f91-45a6-4e4a-82bf-1abe51bfc538">
-     <br />
-     We can see all containers have status as EXITED
-    <br />
-    
-    Now to start one of these say last one "silly_moore" we will do <br />
-    <b> docker start silly_moore </b>
-    
-    now if we do - <b> docker container ls -a </b>
-    <br />
-    it will show status as UP
-    <br />
-    <img width="650" alt="image" src="https://github.com/user-attachments/assets/9934649a-142d-4e6a-8742-8bce78a2b912">
-    <br />
-    To again stop this container we can use <br />
-    <b> docker stop silly_moore </b> 
-    <br />
-    <img width="637" alt="image" src="https://github.com/user-attachments/assets/11a197a0-2c12-4ced-9917-f781068e1a40">
-    <br />
+<br />
+show all containers by <b> docker container ls -a </b>
+<br />
+<img width="638" alt="image" src="https://github.com/user-attachments/assets/7e0335df-fbf0-4689-adda-ff7435b9d5ad">
+
+In Docker desktop it will look like : <br />
+<img width="881" alt="image" src="https://github.com/user-attachments/assets/03195f91-45a6-4e4a-82bf-1abe51bfc538">
+ <br />
+ We can see all containers have status as EXITED
+<br />
+
+Now to start one of these say last one "silly_moore" we will do <br />
+<b> docker start silly_moore </b>
+
+now if we do - <b> docker container ls -a </b>
+<br />
+it will show status as UP
+<br />
+<img width="650" alt="image" src="https://github.com/user-attachments/assets/9934649a-142d-4e6a-8742-8bce78a2b912">
+<br />
+To again stop this container we can use <br />
+<b> docker stop silly_moore </b> 
+<br />
+<img width="637" alt="image" src="https://github.com/user-attachments/assets/11a197a0-2c12-4ced-9917-f781068e1a40">
+<br />
 
 6. execute docker commands inside container <br />
 Lets say we want to execute inside container silly_moore so for this we need to make sure container is running. Hence if its not then use <b> docker start silly_moore </b>
