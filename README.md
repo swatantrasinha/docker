@@ -18,10 +18,8 @@ This is the actual docker tool and can perform actions like :
 
 ## Popular Docker Commands
 
-1. docker run
-<br />
-
-    ![command-01](https://github.com/user-attachments/assets/dd7f8f5e-0db9-49a9-be7e-95595d39ecbf)
+1. docker run <br />
+![command-01](https://github.com/user-attachments/assets/dd7f8f5e-0db9-49a9-be7e-95595d39ecbf)
 
 
 3. docker container ls
