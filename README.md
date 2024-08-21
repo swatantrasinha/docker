@@ -75,13 +75,29 @@ Here we can see after exec command we are still in container and we can do ls to
 
 Note: Press Control + D to get out of container <br />
 
-# 6. To see what all images are available in my computer
+# 6. images in local machine
+<br />
 <b> docker images </b> 
 <br /> or <br />
 <b> docker image ls </b> 
 <br />
 <img width="503" alt="image" src="https://github.com/user-attachments/assets/8688df8e-4d50-49cf-985a-00ebe791790d"> <br />
 
+Note: The above command is only to see images in local machine , we can go to dockerhub to see list of all images 
+like node, postgress, redis, python, ngnix etc <br />
+
+We can use these images <br /> 
+<b> docker run -it node </b> <br />
+It will say unable to find locally and then it will start pulling images from docker hub <br />
+and it would spin up container automatically where node js is running <br />
+<img width="538" alt="image" src="https://github.com/user-attachments/assets/9c993b24-64a0-4e14-bb5e-2fb2dfb188b1">
+<br />
+We can use this as node js terminal <br />
+<img width="202" alt="image" src="https://github.com/user-attachments/assets/ab2b7001-4545-4a5a-9f8f-9e70b4942d59"> <br />
+Now since node images is also pullled in our local machine so if we exit from container using Control + D and then type <br />
+<b> docker container ls -a </b> <br />
+We can see node is also there with ubuntu <br />
+<img width="728" alt="image" src="https://github.com/user-attachments/assets/d10917e7-d827-474a-a6a5-9a462eca74e1"> </br >
 
 
 
