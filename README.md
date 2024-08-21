@@ -62,7 +62,7 @@ To again stop this container we can use <br />
 Lets say we want to execute inside container silly_moore so for this we need to make sure container is running. Hence if its not then use <br />
 <b> docker start silly_moore </b> <br /> 
 and then for execute command use below : 
-<b> docker exec <container_name> ls </b> <br />
+<b> docker exec <container_name> <command> </b> <br />
 The result of ls is being shown in the terminal <br />
 <img width="563" alt="image" src="https://github.com/user-attachments/assets/5f20e818-2bc0-4da8-a38d-acdd0c0a0fb1"> <br />
 Here the ls content is shown in terminal and container is detached hence we are out of the container <br />
@@ -72,6 +72,9 @@ Now if we want our terminal to remain attached to the container then use <br />
 
 Here we can see after exec command we are still in container and we can do ls to see  <br />
 <img width="593" alt="image" src="https://github.com/user-attachments/assets/0a0b3de5-3691-4564-9f99-0b26be33a924"> <br />
+
+Note: Press Control + D to get out of container <br />
+
 
 
 
