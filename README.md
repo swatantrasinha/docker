@@ -61,7 +61,9 @@ To again stop this container we can use <br />
 <br />
 
 6. execute docker commands inside container <br />
-Lets say we want to execute inside container silly_moore so for this we need to make sure container is running. Hence if its not then use <b> docker start silly_moore </b>
+Lets say we want to execute inside container silly_moore so for this we need to make sure container is running. Hence if its not then use <br />
+<b> docker start silly_moore </b>
+<br /> and then for execute command use below : 
 <b> docker exec <container_name> ls </b>
 <br />
 The result of ls is being shown in the terminal <br />
