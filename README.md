@@ -32,7 +32,9 @@ This is the actual docker tool and can perform actions like :
 
 <img width="632" alt="image" src="https://github.com/user-attachments/assets/efc86167-d080-4ebb-a1ba-833ee9317fc1">
 
-4. show all containers by <b> docker container ls -a </b>
+4. start and stop containers
+<br />
+show all containers by <b> docker container ls -a </b>
 <br />
 <img width="638" alt="image" src="https://github.com/user-attachments/assets/7e0335df-fbf0-4689-adda-ff7435b9d5ad">
 
@@ -50,6 +52,12 @@ now if we do - <b> docker container ls -a </b>
 it will show status as UP
 <br />
 <img width="650" alt="image" src="https://github.com/user-attachments/assets/9934649a-142d-4e6a-8742-8bce78a2b912">
+<br />
+To again stop this container we can use <br />
+<b> docker stop silly_moore </b>
+<img width="637" alt="image" src="https://github.com/user-attachments/assets/11a197a0-2c12-4ced-9917-f781068e1a40">
+<br />
+
 
 
 
