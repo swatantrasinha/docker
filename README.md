@@ -99,6 +99,10 @@ Now since node images is also pullled in our local machine so if we exit from co
 We can see node is also there with ubuntu <br />
 <img width="728" alt="image" src="https://github.com/user-attachments/assets/d10917e7-d827-474a-a6a5-9a462eca74e1"> </br >
 
+### 6. Port Mapping
+<br />
+
+
 
 
 
