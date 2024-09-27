@@ -101,6 +101,11 @@ We can see node is also there with ubuntu <br />
 
 ### 6. Port Mapping
 <br />
+The container port is different then browser port so need PORT-Mapping <br />
+docker run -it p <my-port>:<container-port> <container-image>
+<br />
+
+
 
 
 
