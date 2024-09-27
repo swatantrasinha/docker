@@ -106,6 +106,68 @@ docker run -it p <my-port>:<container-port> <container-image>
 <br />
 
 
+### 7. Environment Variables
+<br />
+Say we have two environment variables
+key1 and key2 with values value1 and value2 respectively <br />
+
+> docker run -it p <my-port>:<container-port> -e key1=value1 -e key2=value2 <container-image>
+
+<br />
+
+### 8. Dockerize Application
+
+# Step1 : initialize 
+> npm init
+
+# Step2: install express
+> npm i express
+
+# Step3: create file main.jsand then write below code in main.js
+<br />
+
+```javascript
+const express= require('express');
+const app= express();
+
+const PORT= process.env.PORT || 8000;
+
+app.get('/', (req,res) => {
+    return res.json({message: 'hey I am node js in container'})
+})
+app.listen(PORT, () => console.log(`Server started on port ${PORT}`))
+
+```
+# Step4: create docker file and write below code in it
+
+```javascript
+FROM ubuntu
+
+RUN apt-get update
+
+RUN apt-get install -y curl
+
+RUN curl -sL https://deb.nodesource.com/setup_18.x | bash -
+
+RUN apt-get upgrade -y
+
+RUN apt-get install -y nodejs
+
+COPY package.json package.json
+
+COPY package-lock.json package-lock.json
+
+COPY main.js main.js
+
+RUN npm install
+
+ENTRYPOINT [ "node","index.js" ]`
+```
+
+
+Build Docker Image
+> docker build -t mynodeapp .
+
 
 
 
