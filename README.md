@@ -246,6 +246,13 @@ now we will give -
 <br />
 In docker desktop we can see "swatantrasinha/swatantra-repo" <br />
 <img width="910" alt="image" src="https://github.com/user-attachments/assets/bda9a0cb-4188-49a1-a9f2-40f2f69a870f">
+<br />
+Finally we will push it <br />
+> docker push swatantrasinha/swatantra-repo
+<br />
+
+<img width="917" alt="image" src="https://github.com/user-attachments/assets/3cf60e88-12c6-4b2b-b318-2321c1390f59">
+
 
 
 
