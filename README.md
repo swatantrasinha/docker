@@ -174,7 +174,7 @@ ENTRYPOINT [ "node","main.js" ]
 `
 ```
 
-
+# Step5: build the image 
 Build Docker Image with below command
 > docker build -t mynodeapp .
 
@@ -189,6 +189,9 @@ In Docker Desktop we can see our image <b> "swatantra-node-app"  </b> <br />
 This image is not in docker-hub but in our local machine and we can run it as below :
 <br />
 
+
+# Step6: run  the container
+<br />
  > docker run -it -p 8000:8000 swatantra-node-app 
 <br />
 
@@ -197,6 +200,8 @@ This image is not in docker-hub but in our local machine and we can run it as be
 Now if we send a <b>GET</b> request via postman with URL - <b> localhost:8000 </b> then  we will get the response <br />
 <img width="806" alt="image" src="https://github.com/user-attachments/assets/3f2ab2a0-4097-466a-9ab5-05c3d0364cff">
 <br />
+
+# Step7: use of env varibale
 
 Now lets see how to use env varibale. In out application we are using 
 > const PORT= process.env.PORT || 8000;
@@ -209,8 +214,9 @@ So PORT is from environment variable <br />
 <br />
 Now if we use POST and hot <b> GET </b>  request with URL - <b> localhost:4000 </b> it will work <br />
 <img width="489" alt="image" src="https://github.com/user-attachments/assets/718e1c9f-4504-4123-a8d8-5511f84e5a78">
+<br />
 
-
+Note: In Docker layer caching is followed <br />
 
 
 
