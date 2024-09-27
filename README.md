@@ -178,7 +178,28 @@ ENTRYPOINT [ "node","main.js" ]
 Build Docker Image with below command
 > docker build -t mynodeapp .
 
+<br />
 <img width="904" alt="image" src="https://github.com/user-attachments/assets/9f1fe6f7-80de-4991-8da1-38914158a1af">
+<br />
+
+So the image is build <br />
+In Docker Desktop we can see our image <b> "swatantra-node-app"  </b> <br />
+<img width="1104" alt="image" src="https://github.com/user-attachments/assets/9fe87cb9-0f4b-4183-8dad-994163fb6df9">
+<br />
+This image is not in docker-hub but in our local machine and we can run it as below :
+<br />
+
+ > docker run -it -p 8000:8000 swatantra-node-app 
+<br />
+
+<img width="958" alt="image" src="https://github.com/user-attachments/assets/08339157-263a-41b0-890f-1cb3eb79f40d">
+<br />
+Now if we send a <b>GET</b> request via postman with URL - <b> localhost:8000 </b> then  we will get the response <br />
+<img width="806" alt="image" src="https://github.com/user-attachments/assets/3f2ab2a0-4097-466a-9ab5-05c3d0364cff">
+<br />
+
+
+
 
 
 
