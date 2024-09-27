@@ -219,6 +219,39 @@ Now if we use POST and hot <b> GET </b>  request with URL - <b> localhost:4000 <
 Note: In Docker layer caching is followed <br />
 
 
+# Step8: Publish Image to Docker Hub
+<br />
+
+- login to <b> https://hub.docker.com/ </b>
+- Click on <b> Create Repository </b> 
+- give a name - <b> swatantra-repo </b>
+- Select Visibility as <b> Public </b>
+- Click on <b>Create</b>
+
+After Click on "Create", we can see on right side <br />
+> docker push swatantrasinha/swatantra-repo:tagname
+<br />
+
+<img width="466" alt="image" src="https://github.com/user-attachments/assets/64c3ebeb-6cf8-41b3-8a31-a865b64a3bea">
+<br />
+So we need to create an image with name <b> swatantrasinha/swatantra-repo </b>
+<br />
+so we will go back to our terminal <br />
+earlier we gave command :  "docker build -t mynodeapp ." (See Step 5)
+<br />
+now we will give - 
+> docker build -t swatantrasinha/swatantra-repo .
+<br />
+<img width="955" alt="image" src="https://github.com/user-attachments/assets/e2a91c51-4b14-457e-9f53-93e6ced0c8a7">
+<br />
+In docker desktop we can see "swatantrasinha/swatantra-repo" <br />
+<img width="910" alt="image" src="https://github.com/user-attachments/assets/bda9a0cb-4188-49a1-a9f2-40f2f69a870f">
+
+
+
+
+
+
 
 
 
