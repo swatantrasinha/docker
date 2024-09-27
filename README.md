@@ -138,35 +138,47 @@ app.get('/', (req,res) => {
 app.listen(PORT, () => console.log(`Server started on port ${PORT}`))
 
 ```
+
+Now we have a node application with files like package.json, main.js, package-lock.json
+to dockerize it we will create docker file
+
 # Step4: create docker file and write below code in it
 
 ```javascript
-FROM ubuntu
+# ----------- FROM ubuntu: choose base image as ubuntu on top of which we will install node js -----------#
 
-RUN apt-get update
+# FROM ubuntu
 
-RUN apt-get install -y curl
+#----------- install node js on ubuntu -----------#
 
-RUN curl -sL https://deb.nodesource.com/setup_18.x | bash -
+# RUN apt-get update
+# RUN apt-get install -y curl
+# RUN curl -sL https://deb.nodesource.com/setup_18.x | bash -
+# RUN apt-get upgrade -y
+# RUN apt-get install -y nodejs
 
-RUN apt-get upgrade -y
+# ----- Below one line is alternative to above all the lines -----#
+FROM node:alpine
 
-RUN apt-get install -y nodejs
+# ----- Node js is installed and now copy files ----- #
+WORKDIR /usr/app
 
 COPY package.json package.json
-
 COPY package-lock.json package-lock.json
-
 COPY main.js main.js
 
 RUN npm install
 
-ENTRYPOINT [ "node","index.js" ]`
+# ----- declare entry point -----#
+ENTRYPOINT [ "node","main.js" ]
+`
 ```
 
 
-Build Docker Image
+Build Docker Image with below command
 > docker build -t mynodeapp .
+
+<img width="904" alt="image" src="https://github.com/user-attachments/assets/9f1fe6f7-80de-4991-8da1-38914158a1af">
 
 
 
