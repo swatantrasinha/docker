@@ -198,6 +198,19 @@ Now if we send a <b>GET</b> request via postman with URL - <b> localhost:8000 </
 <img width="806" alt="image" src="https://github.com/user-attachments/assets/3f2ab2a0-4097-466a-9ab5-05c3d0364cff">
 <br />
 
+Now lets see how to use env varibale. In out application we are using 
+> const PORT= process.env.PORT || 8000;
+
+So PORT is from environment variable <br />
+
+> docker run -it -e PORT=4000 -p 4000:4000 swatantra-node-app
+
+<img width="1046" alt="image" src="https://github.com/user-attachments/assets/cff87a70-1037-4cce-8f47-50b5659780af">
+<br />
+Now if we use POST and hot <b> GET </b>  request with URL - <b> localhost:4000 </b> it will work <br />
+<img width="489" alt="image" src="https://github.com/user-attachments/assets/718e1c9f-4504-4123-a8d8-5511f84e5a78">
+
+
 
 
 
