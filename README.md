@@ -272,7 +272,17 @@ Note: if we are not logged in then before push it may ask to login
 So, usually in real world for an application - we would need multiple containers with separate configuration and running on specific port <br />
 one way is to put command somewhere and keep executing one after other but that has difficulty in getting which container has dependency on other etc <br />
 
-To overcome these we have <b> docker-compose </b>  
+To overcome these we have <b> docker-compose </b> where we write configurations for multiple containers <br />
+Below 2 commands are used once docker-compose.yml file is created: 
+<br />
+
+> docker compose up
+
+<br />
+
+> docker compose down
+
+
 
  
 
