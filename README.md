@@ -261,6 +261,19 @@ Note: if we are not logged in then before push it may ask to login
 
 
  ### 9. Docker Compose File
+
+ lets say we are open source contributor and contributing for some application with name <b>cal.com</b>
+ <br />
+ For this we may need multiple containers say : <br />
+ - postgress in port 5432
+ - redis in port 6372
+ - mailhog in some port
+<br />
+So, usually in real world for an application - we would need multiple containers with separate configuration and running on specific port <br />
+one way is to put command somewhere and keep executing one after other but that has difficulty in getting which container has dependency on other etc <br />
+
+To overcome these we have docker-compose 
+
  
 
 
