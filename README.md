@@ -1,3 +1,7 @@
+Docker In One Shot
+
+# PART1 : 
+
 # docker
 
 Lets learn docker 
@@ -284,7 +288,21 @@ Below 2 commands are used once docker-compose.yml file is created:
 
 <hr />
 
-# Part2: Docker Networking
+# Part2:
+Lets say we gae below command: <br />
+ >  docker run -it --name my-container busybox
+
+<br />
+
+and then inside the container we did <br />
+> ping google.com
+<br />
+
+<img width="935" alt="image" src="https://github.com/user-attachments/assets/0073e0c7-6b70-4e49-b2ba-3c0f3afbe2f6">
+<br />
+So we can see container is able to ping google.com(outside world) - this is the networking <br />
+
+
 
 
 
