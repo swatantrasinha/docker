@@ -282,6 +282,11 @@ Below 2 commands are used once docker-compose.yml file is created:
 
 > docker compose down
 
+<hr />
+
+# Part2: Docker Networking
+
+
 
 
  
