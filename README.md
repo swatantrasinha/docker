@@ -317,17 +317,30 @@ So when we typed above command : <br />
 <br />
 then we did not specify anything related to networking or driver so by default it will take <b> bridge driver </br>
 
+Now lets run this busybox container again with name my-busybox-container <br />
 
+> docker run -it --name my-busybox-container busybox
 
+<br />
+<img width="832" alt="image" src="https://github.com/user-attachments/assets/55d1609d-1332-4f37-9973-23e512c84b2e">
+<br />
+In another terminal we will type command <br />
 
+> docker network inspect bridge
+<br />
+<img width="689" alt="image" src="https://github.com/user-attachments/assets/1c74ccd2-7502-422a-a814-10a17641c10f">
+<br />
+so we can see which all containers are connected with this bridge network <br />
+As of now its only <b> my-busybox-container </b> <br /> and there is IP address also for it <br />
 
+To see which all drivers are available we can do <br />
 
- 
+> docker network ls
+<br />
 
-
-
-
-
+<img width="608" alt="image" src="https://github.com/user-attachments/assets/0c624b0a-ee3d-49da-9aab-8d8140a46ff1">
+<br />
+These three drivers - "bridges", "host" and "none" are bydefault available and we will look at these now <br />
 
 
 
