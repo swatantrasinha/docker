@@ -303,17 +303,21 @@ and then inside the container we did <br />
 So we can see container is able to ping google.com(outside world) - this is the <b> Docker Networking </b> <br />
 if we see official docs : https://docs.docker.com/engine/network/drivers/
 <br />
-we can see many drivers in docker networking like 
-- bridge : default driver
-- host
-- overlay
-- ipvlan
-- macvlan
+we can see many drivers in docker networking like : 
+<ul> - bridge : default driver </ul> 
+<ul> - host </ul>
+<ul> -  overlay </ul>
+<ul> - ipvlan </ul>
+<ul> - macvlan </ul>
 <br />
-So when we typed above command :
+So when we typed above command : <br />
+
 > docker run -it --name my-container busybox
 
-then we did not specify anything related to networking or driver so by default it will take <b> bridge driver </b>
+<br />
+then we did not specify anything related to networking or driver so by default it will take <b> bridge driver </br>
+
+
 
 
 
