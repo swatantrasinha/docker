@@ -274,7 +274,8 @@ Note: if we are not logged in then before push it may ask to login
  - mailhog in some port
 <br />
 So, usually in real world for an application - we would need multiple containers with separate configuration and running on specific port <br />
-one way is to put command somewhere and keep executing one after other but that has difficulty in getting which container has dependency on other etc <br />
+one way is to p
+ut command somewhere and keep executing one after other but that has difficulty in getting which container has dependency on other etc <br />
 
 To overcome these we have <b> docker-compose </b> where we write configurations for multiple containers <br />
 Below 2 commands are used once docker-compose.yml file is created: 
@@ -289,6 +290,8 @@ Below 2 commands are used once docker-compose.yml file is created:
 <hr />
 
 # Part2:
+## Docker Network
+
 Lets say we gae below command: <br />
  >  docker run -it --name my-container busybox
 
@@ -362,7 +365,7 @@ Now after <b>bridge</b> and <b> host</b> , lets see <b>none</b>  <br />
 Here network mode none means there is no network so it wont be able to ping google.com <br />
 
 
-Custom Network
+## Custom Network
 > docker network create -d bridge youtube
 <br />
 now we will do <br />
@@ -370,15 +373,65 @@ now we will do <br />
 > docker network ls
 <br />
 <img width="755" alt="image" src="https://github.com/user-attachments/assets/0eccee06-0827-40c8-a65d-795f2164ef45">
+<br />
 We created our own network which is bydefault inside bridge (last one in above screenshot) <br />
 
+now, in terminal give command : <br />
+> docker run -it --network=youtube --name tony_stark ubuntu
+<br />
+<img width="880" alt="image" src="https://github.com/user-attachments/assets/1d108e34-a0b7-4226-bf40-d4a52b647343">
 
+<br /> and then open other termina and give command:
 
+>  docker run -it --network=youtube --name dr_strange busybox
+<br />
+<img width="881" alt="image" src="https://github.com/user-attachments/assets/de0dbfd8-1b24-4b27-a890-583022d7b925">
+<br />
+<b> Here we can see we have 2 different containers  on same network with different Operating System. The benefit is being on same network they can communicate
+</b>
+In third terminal if we give command : <br />
+>  docker network inspect youtube
+<br />
+<img width="692" alt="image" src="https://github.com/user-attachments/assets/c7a038d1-12cc-4e38-b1c3-7b95ebe6d46f">
+<br />
+Here its showing 2 conatiners with ip addresses. We can use the ip-address or name to ping one container from other <br />
+We will go to our second terminal (which is dr_strange) and ping to tony_stark created in first terminal <br />
+<img width="887" alt="image" src="https://github.com/user-attachments/assets/f3499d0b-5ec3-4b15-a684-de8330ff9fde">
+<br />
+if we close the first container (command+C exit) <br />
+<img width="896" alt="image" src="https://github.com/user-attachments/assets/7c4e0960-ef43-4624-ac7f-d87312e21983">
+then in second terminal since its pinging to first so it will show error <br />
+<img width="243" alt="image" src="https://github.com/user-attachments/assets/ed4a4643-a3e5-447d-b84c-fbbe75c02164">
+<br />
 
+Note: When we create docker-compose then also we create our own custom network, where we create DB and other application needed for DB on same network <br />
+then we need not to manage IP addressses of containers. Actually, the IP addresses can change in real world but name remains same <br />
 
+## Volume Mounting
 
+Whenever we create a container it has some memory and once container is destroyed its memory also gets destroyed <br />
+To prevent this we have "Docker Volumes" - its like permanent storage
+<br />
+lets create a new folder in our host machine -> Documents with name "docker-docs" <br />
+<img width="362" alt="image" src="https://github.com/user-attachments/assets/7bfbf335-4dec-4721-b9d8-a29901079915">
+<br /> Lets run command : <br />
 
+> docker run -it -v C:\Users\617395537\Documents\docker-docs:/home/abc ubuntu
+<br />
+<img width="1009" alt="image" src="https://github.com/user-attachments/assets/f0641a13-3082-494c-9bd3-c955c9f890b5">
 
+<br />
+We can see new folder created in our host machine <br />
+<img width="437" alt="image" src="https://github.com/user-attachments/assets/9b9bb3c4-9445-4940-b866-4a611838a49b">
+<br />
+So now even if container is destroyed the data is still in host machine so next time when container is created, the data can be taken from here.
+<br />
+Note: We can create our own <b> Custom Docker Volumes </b>
+<br />
+https://docs.docker.com/engine/storage/volumes/
+<br />
+
+## Efficient Caching
 
 
 
