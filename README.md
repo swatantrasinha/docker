@@ -341,6 +341,38 @@ To see which all drivers are available we can do <br />
 <img width="608" alt="image" src="https://github.com/user-attachments/assets/0c624b0a-ee3d-49da-9aab-8d8140a46ff1">
 <br />
 These three drivers - "bridges", "host" and "none" are bydefault available and we will look at these now <br />
+<br />
+We have seen <b>bridge</b> above, now lets have a look at the <b> host </b> 
+<br />
+
+> docker run -it --network=host busybox
+<br />
+Here its networking is in host mode means - <b> it does not have any bridge its directly connected to our host machine only </b>  <br />
+We saw concept of port mapping where we used to expose the port <br />
+> docker run -it -p 3000:3000 nodejs
+<br />
+<br /> However in case of host its not needed as host machine and docker container are on same port
+
+Now after <b>bridge</b> and <b> host</b> , lets see <b>none</b>  <br />
+
+> docker run -it --network=none busybox
+<br />
+<img width="738" alt="image" src="https://github.com/user-attachments/assets/87527663-b6c0-4a23-ab25-74ecb1ef26c4">
+<br />
+Here network mode none means there is no network so it wont be able to ping google.com <br />
+
+
+Custom Network
+> docker network create -d bridge youtube
+<br />
+now we will do <br />
+
+> docker network ls
+<br />
+<img width="755" alt="image" src="https://github.com/user-attachments/assets/0eccee06-0827-40c8-a65d-795f2164ef45">
+We created our own network which is bydefault inside bridge (last one in above screenshot) <br />
+
+
 
 
 
