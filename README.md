@@ -432,6 +432,45 @@ https://docs.docker.com/engine/storage/volumes/
 <br />
 
 ## Efficient Caching
+When we build an image, there is later caching. If we change any code change then all layers below it will rerun.
+
+### Docker Multi-staged Builds
+We have seen single staged build --> Getting a base image and build it. 
+Something like below : <br />
+<img width="215" alt="image" src="https://github.com/user-attachments/assets/97886e0d-6010-499e-801e-021b4a229ed5">
+
+<br /> Here we are doing everything on Ubuntu <br />
+lets say out tech-stack is something that we have <b> typescript <b/> so typescript files need to be compiled to javascript <br />
+If we write pipelines for it then <br />
+<img width="394" alt="image" src="https://github.com/user-attachments/assets/cd3250c4-0223-4c5c-be74-c119f1f0cb14">
+<br />
+<img width="247" alt="image" src="https://github.com/user-attachments/assets/aabfdbee-6f1c-402b-bbf9-3bab4d441c4c">
+<br />
+If we compare it with earlier screenshot then <br /> we can conclude that container size will increase <br />
+technically typescript is not needed in production (its only needed at build time) <br />
+So for this we can use multi-staged builds <br />
+here first we will have build stage <br />
+
+
+<img width="245" alt="image" src="https://github.com/user-attachments/assets/05161fa6-6796-402c-8b8a-893b51c73d26">
+
+This is like the above has compiled our code and put in app directory <br />
+
+In second stage, from the last stage(build stage), it will copy all code from app directory and run it  <br />
+so it will only copy important and needed files and not files like typescript <br />
+
+<img width="134" alt="image" src="https://github.com/user-attachments/assets/bead1253-725f-493c-b78e-f62ffac7bab3">
+<br /> <br />
+So the two multi-staged build is below(each stage in box) : <br />
+<img width="296" alt="image" src="https://github.com/user-attachments/assets/cc45fa95-2ff7-45cc-97c8-ce1774269cdd">
+<br />
+
+
+
+
+
+
+
 
 
 
